@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/avatar_select"
+        android:layout_width="152dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/select_image" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="95dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="20dp"
+        android:text="My Avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_select" />
+
+    <EditText
+        android:id="@+id/First_Name"
+        android:layout_width="317dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/Last_Name"
+        android:layout_width="317dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/First_Name"
+        app:layout_constraintTop_toBottomOf="@+id/First_Name" />
+
+    <EditText
+        android:id="@+id/Student_ID"
+        android:layout_width="281dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="9"
+        android:hint="Student ID"
+        app:layout_constraintStart_toStartOf="@+id/Last_Name"
+        app:layout_constraintTop_toBottomOf="@+id/Last_Name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="109dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:text="Department:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Student_ID" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="179dp"
+        android:layout_height="160dp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/CS_Dept"
+            android:layout_width="79dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CS" />
+
+        <RadioButton
+            android:id="@+id/BIO_dept"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BIO" />
+
+        <RadioButton
+            android:id="@+id/SIS_dept"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SIS" />
+
+        <RadioButton
+            android:id="@+id/Other_dept"
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Other" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Save_button"
+        android:layout_width="151dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Save"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</android.support.constraint.ConstraintLayout>
